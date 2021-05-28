@@ -27,3 +27,12 @@ sudo docker images
 
 # 配置镜像加速
 
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://chqac97z.mirror.aliyuncs.com"]
+}
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl restart docker
