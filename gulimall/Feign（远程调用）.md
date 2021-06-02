@@ -6,7 +6,7 @@ feign是一个声明式的HTTP客户端，他的目的就是让远程调用更�
 
 会员服务想要远程调用优惠券服务，只需要给会员服务里引入openfeign依赖，他就有了远程调用其他服务的能力。
 
-~~~~
+~~~
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-openfeign</artifactId>
