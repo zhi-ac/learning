@@ -23,7 +23,8 @@ TLAB：Thread Local Allocation Buffer，也就是为每个线程单独分配了�
 * 在程序中，开发人员可以通过选项“-XX:UseTLAB”设置是否开启TLAB空间。
 * 默认情况下，TLAB空间的内存非常小，仅占有整个Eden空间的1%，当然我们可以通过选项“-XX:TLABWasteTargetPercent”设置TLAB空间所占用Eden空间的百分比大小。
 * 一旦对象在TLAB空间分配内存失败时，JVM就会尝试着通过使用加锁机制确保数据操作的原子性，从而直接在Eden空间中分配内存。
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/59955759/122186117-47e27c00-cec0-11eb-9851-d2f2402e4c9f.png)
+
 ~~~
 /**
  * 测试-XX:UseTLAB参数是否开启的情况:默认情况是开启的
